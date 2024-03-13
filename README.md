@@ -40,12 +40,62 @@ Explore the demo folder to test an example version of the game. Follow these ste
 
 3. Launch the jar file "TerminalRPGEngine.jar" using the following command:
 
-   ```bash
-   java -jar TerminalRPGEngine.jar
+ ```bash
+ java -jar TerminalRPGEngine.jar
+ ```
 
 ## Usage
 To create your own game:
 
 1. Design entities based on the example .dot file in the 'config' directory
+
 2. Define actions based on the example .xml file in the 'config' directory
+
 3. Place these files in the config sub-directory within the directory containing the .jar
+
+## Example Files
+### Entity (.dot) File Example:
+```dot
+digraph layout {
+    splines = ortho;
+    graph [ranksep="1" nodesep="1"];
+    node [shape = "rect"];
+
+    subgraph locations {
+
+        subgraph cluster001 {
+            node [shape = "none"];
+            cabin [description = "A log cabin in the woods"];
+            subgraph artefacts {
+                node [shape = "diamond"];
+                potion [description = "A bottle of magic potion"];
+                axe [description = "A razor sharp axe"];
+                coin [description = "A silver coin"];
+            }
+            subgraph furniture {
+                node [shape = "hexagon"];
+                trapdoor [description = "A locked wooden trapdoor in the floor"];
+            }
+        }
+```
+### Action (.xml) File Example:
+```xml
+<actions>
+    <action>
+        <triggers>
+            <keyphrase>open</keyphrase>
+            <keyphrase>unlock</keyphrase>
+        </triggers>
+        <subjects>
+            <entity>trapdoor</entity>
+            <entity>key</entity>
+        </subjects>
+        <consumed>
+            <entity>key</entity>
+        </consumed>
+        <produced>
+            <entity>cellar</entity>
+        </produced>
+        <narration>You unlock the door and see steps leading down into a cellar</narration>
+    </action>
+```
