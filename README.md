@@ -47,11 +47,11 @@ Explore the demo folder to test an example version of the game. Follow these ste
 ## Usage
 To create your own game:
 
-1. Design entities based on the example .dot file in the 'config' directory
+1. Design entities based on the example .dot file in the 'config' directory.
 
-2. Define actions based on the example .xml file in the 'config' directory
+2. Define actions based on the example .xml file in the 'config' directory.
 
-3. Place these files in the config sub-directory within the directory containing the .jar
+3. Place these files in the config sub-directory within the directory containing the .jar.
 
 ## Example Files
 ### Entity (.dot) File Example:
