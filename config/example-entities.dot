@@ -1,7 +1,5 @@
 digraph layout {
-    /* ortho splines just makes the arrows into straight lines (rather than curvy ones !) */
     splines = ortho;
-    /* space everything out a bit to make it easier to see (for larger models) */
     graph [ranksep="1" nodesep="1"];
     node [shape = "rect"];
 
